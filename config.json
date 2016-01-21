@@ -29,7 +29,7 @@
         }
       },
       {
-        "NAME": "WALL SIT",
+        "NAME": "WALLSIT",
         "UNIT": "SEC OF",
         "REPS": {
           "MIN": 15,

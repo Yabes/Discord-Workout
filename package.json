@@ -9,6 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "discord.io": "^1.6.5"
+    "discord.io": "^1.6.5",
+    "bjson": "^1.0.1"
+  },
+  "devDependencies": {
   }
 }

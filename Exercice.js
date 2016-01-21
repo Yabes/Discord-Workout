@@ -11,15 +11,17 @@ var Utils = require('./Utils.js');
 function Exercice(options) {
   var opt = options || {};
 
-  var exercice = opt.exercice || Utils.RandomInArray(config.EXERCISES.TYPES);
-  this._userID = opt.userID   || "";
-  this._reps   = opt.reps     || Utils.Random(exercice.REPS.MIN, exercice.REPS.MAX);
-  this._name   = exercice.NAME;
-  this._unit   = exercice.UNIT;
+  var exercice   = opt.exercice || Utils.RandomInArray(config.EXERCISES.TYPES);
+  this._userID   = opt.userID   || "";
+  this._username = opt.username || "";
+  this._reps     = opt.reps     || Utils.Random(exercice.REPS.MIN, exercice.REPS.MAX);
+  this._name     = exercice.NAME;
+  this._unit     = exercice.UNIT;
 }
 
 /**
  * @method getMessage
+ * @desc return a string about the exercice
  * @return {string} - message
  */
 Exercice.prototype.getMessage = function() {

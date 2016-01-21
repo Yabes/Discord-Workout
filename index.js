@@ -2,6 +2,7 @@ var DiscordClient = require('discord.io');
 
 var Utils = require('./Utils.js');
 var Exercice = require('./Exercice.js');
+var Score = require('./Score.js');
 
 var CONFIG = require('./config.json');
 var CREDENTIALS = require('./credentials.json');
@@ -53,30 +54,40 @@ bot.on('ready', function() {
     });
 
     setInterval(function() {
+      // Pick an user
       var user = Utils.RandomInArray(userList);
 
+      // Create a new Exercice
       var exercice = new Exercice({
-        userID: user.ID
+        userID: user.ID,
+        username: user.username
       });
 
+      // Send exercice message
       bot.sendMessage({
         to: topChannelID,
         message: exercice.getMessage(),
         typing: true
       });
 
+      // Keep score
+      Score.addScore(exercice);
+
+      // Change presence
       bot.setPresence({
-        game: 'Doing ' + exercice._name + ' with ' + user.username
+        game: exercice._name + ' with ' + user.username
       });
 
     }, CONFIG.EXERCISES.DELAY);
   });
-
 });
 
 bot.on('message', function( user, userID, channelID, message, rawEvent ) {
   if (message === '!score') {
-
+    bot.sendMessage({
+      to: channelID,
+      message: JSON.stringify(Score.getScore)
+    });
   }
 });
 
