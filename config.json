@@ -1,0 +1,41 @@
+{
+  "CHANNELS": [""], 
+  "EXERCISES": {
+    "DELAY": 1800000,
+    "LEVEL": 1.0,
+    "TYPES": [
+      {
+        "NAME": "SITUPS",
+        "UNIT": "",
+        "REPS": {
+          "MIN": 3,
+          "MAX": 10
+        }
+      },
+      {
+        "NAME": "PUSHUPS",
+        "UNIT": "",
+        "REPS": {
+          "MIN": 3,
+          "MAX": 10
+        }
+      },
+      {
+        "NAME": "PLANK",
+        "UNIT": "SEC OF",
+        "REPS": {
+          "MIN": 15,
+          "MAX": 30
+        }
+      },
+      {
+        "NAME": "WALL SIT",
+        "UNIT": "SEC OF",
+        "REPS": {
+          "MIN": 15,
+          "MAX": 30
+        }
+      }
+    ]
+  }
+}
