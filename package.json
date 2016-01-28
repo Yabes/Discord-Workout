@@ -13,5 +13,6 @@
     "bjson": "^1.0.1"
   },
   "devDependencies": {
+    "babel-cli": "^6.4.5"
   }
 }

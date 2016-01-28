@@ -1,7 +1,8 @@
 {
-  "CHANNELS": [""], 
+  "GREETINGS": "ARE YOU READY TO DO SOME PUSHUPS?",
   "EXERCISES": {
     "DELAY": 1800000,
+    "DELAY_OFFSET": 250000,
     "LEVEL": 1.0,
     "TYPES": [
       {
