@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -Rf dist",
+    "test": "NODE_ENV=debug npm run start",
+    "build": "./node_modules/.bin/babel src --out-dir dist && cp src/*.json dist/",
+    "prestart": "npm run clean && npm run build",
+    "start": " node dist/index.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +19,7 @@
     "pretty-ms": "^2.1.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.4.5"
+    "babel-cli": "^6.4.5",
+    "babel-preset-es2015": "^6.3.13"
   }
 }
