@@ -1,77 +1,94 @@
 {
 	"players": {
-		"Coco": {
-			"PUSHUPS": 6,
-			"PLANK": 0,
-			"SITUPS": 0,
-			"WALLSIT": 0
+		"Léon": {
+			"total": 6,
+			"detail": {
+				"PUSHUPS": 9,
+				"PLANK": 52,
+				"SITUPS": 10,
+				"WALLSIT": 38
+			}
 		},
-		"Kissara": {
-			"PUSHUPS": 8,
-			"PLANK": 18,
-			"SITUPS": 0,
-			"WALLSIT": 21
-		},
-		"TheDoc": {
-			"PUSHUPS": 7,
-			"PLANK": 26,
-			"SITUPS": 0,
-			"WALLSIT": 22
+		"Rayden": {
+			"total": 3,
+			"detail": {
+				"PUSHUPS": 0,
+				"PLANK": 27,
+				"SITUPS": 4,
+				"WALLSIT": 28
+			}
 		},
 		"Vack_Jabre": {
-			"PUSHUPS": 0,
-			"PLANK": 0,
-			"SITUPS": 10,
-			"WALLSIT": 23
+			"total": 5,
+			"detail": {
+				"PUSHUPS": 16,
+				"PLANK": 23,
+				"SITUPS": 3,
+				"WALLSIT": 24
+			}
 		},
-		"Letourist": {
-			"PUSHUPS": 0,
-			"PLANK": 0,
-			"SITUPS": 0,
-			"WALLSIT": 25
-		},
-		"Mika": {
-			"PUSHUPS": 0,
-			"PLANK": 23,
-			"SITUPS": 0,
-			"WALLSIT": 0
-		},
-		"Léon": {
-			"PUSHUPS": 0,
-			"PLANK": 25,
-			"SITUPS": 0,
-			"WALLSIT": 0
-		},
-		"Féfé": {
-			"PUSHUPS": 10,
-			"PLANK": 0,
-			"SITUPS": 0,
-			"WALLSIT": 0
-		},
-		"Yabot": {
-			"PUSHUPS": 12,
-			"PLANK": 29,
-			"SITUPS": 3,
-			"WALLSIT": 0
+		"TheDoc": {
+			"total": 8,
+			"detail": {
+				"PUSHUPS": 19,
+				"PLANK": 40,
+				"SITUPS": 16,
+				"WALLSIT": 46
+			}
 		},
 		"Yabes": {
-			"PUSHUPS": 0,
-			"PLANK": 28,
-			"SITUPS": 0,
-			"WALLSIT": 0
+			"total": 5,
+			"detail": {
+				"PUSHUPS": 6,
+				"PLANK": 22,
+				"SITUPS": 10,
+				"WALLSIT": 46
+			}
+		},
+		"Coco": {
+			"total": 7,
+			"detail": {
+				"PUSHUPS": 16,
+				"PLANK": 43,
+				"SITUPS": 5,
+				"WALLSIT": 18
+			}
 		},
 		"Macksize": {
-			"PUSHUPS": 0,
-			"PLANK": 0,
-			"SITUPS": 0,
-			"WALLSIT": 16
+			"total": 2,
+			"detail": {
+				"PUSHUPS": 0,
+				"PLANK": 0,
+				"SITUPS": 0,
+				"WALLSIT": 46
+			}
 		},
-		"undefined": {
-			"PUSHUPS": 0,
-			"PLANK": 0,
-			"SITUPS": 0,
-			"WALLSIT": 0,
-			"undefined": null
+		"Mika": {
+			"total": 7,
+			"detail": {
+				"PUSHUPS": 16,
+				"PLANK": 48,
+				"SITUPS": 7,
+				"WALLSIT": 46
+			}
+		},
+		"Kissara": {
+			"total": 3,
+			"detail": {
+				"PUSHUPS": 0,
+				"PLANK": 58,
+				"SITUPS": 0,
+				"WALLSIT": 0
+			}
+		},
+		"Letourist": {
+			"total": 6,
+			"detail": {
+				"PUSHUPS": 15,
+				"PLANK": 51,
+				"SITUPS": 6,
+				"WALLSIT": 27
+			}
 		}
 	}
 }

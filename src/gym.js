@@ -1,10 +1,12 @@
+// External import
+import prettyMs from 'pretty-ms';
+
 // Internal imports
 import Score from './score';
 import * as Utils from './utils';
 import Exercice from './exercice';
-
-// Config
-import CONFIG from './config';
+import Scheduler from './scheduler';
+import ServerConfig from './server-config';
 
 /**
  * @class Gym - A sport hall
@@ -29,6 +31,11 @@ export default class Gym {
    * @Param {Boolean=} simulateTyping
    */
   makeDeclaration (message, simulateTyping) {
+    if (process.env.NODE_ENV === 'debug') {
+      console.log(message);
+      return;
+    }
+
     this.trainer.sendMessage({
       to: this.gymID,
       message: message,
@@ -41,10 +48,9 @@ export default class Gym {
    * @desc schedule the next training session
    */
   scheduleExercice () {
-    const offset = Utils.random(-CONFIG.EXERCISES.DELAY_OFFSET, CONFIG.EXERCISES.DELAY_OFFSET);
-    const timeout = CONFIG.EXERCISES.DELAY + offset;
-
-    this.makeDeclaration(`NEXT EXERCISE IN ${Utils.msToMin(timeout)} MIN!`, true);
+    const timeout = Scheduler.getNextTiming(this.gymID);
+    const prettyMsOptions = { compact: true };
+    this.makeDeclaration(`NEXT EXERCISE IN ${prettyMs(timeout, prettyMsOptions).toUpperCase()} !`, true);
 
     setTimeout(() => {
       this.doExercice({ autoSchedule: true });
@@ -64,10 +70,14 @@ export default class Gym {
       user = Utils.randomInArray(this.memberList);
     } while (user.ID === this.trainer.id);
 
+
+    const level = ServerConfig.getConfig(this.gymID).level;
+
     // Create a new Exercice
     const exercice = new Exercice({
       userID: user.ID,
-      username: user.username
+      username: user.username,
+      level
     });
 
     // Send exercice message

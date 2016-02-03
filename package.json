@@ -9,8 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bjson": "^1.0.1",
+    "cron-parser": "^1.1.0",
     "discord.io": "^1.6.5",
-    "bjson": "^1.0.1"
+    "pretty-ms": "^2.1.0"
   },
   "devDependencies": {
     "babel-cli": "^6.4.5"

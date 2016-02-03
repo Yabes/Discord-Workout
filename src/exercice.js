@@ -17,10 +17,11 @@ export default class Exercice {
    * @param {Number}       options.reps     - Number of reps to do
    */
   constructor (options = {}) {
+    const level    = options.level    || CONFIG.EXERCISES.LEVEL;
     const exercice = options.exercice || Utils.randomInArray(CONFIG.EXERCISES.TYPES);
     this.userID    = options.userID   || "";
     this.username  = options.username || "";
-    this.reps      = options.reps     || Utils.random(exercice.REPS.MIN * CONFIG.EXERCISES.LEVEL, exercice.REPS.MAX * CONFIG.EXERCISES.LEVEL);
+    this.reps      = options.reps     || Utils.random(exercice.REPS.MIN * level, exercice.REPS.MAX * level);
     this.name      = exercice.NAME;
     this.unit      = exercice.UNIT;
   }

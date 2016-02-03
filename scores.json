@@ -1,0 +1,94 @@
+{
+	"players": {
+		"TheDoc": {
+			"total": 4,
+			"detail": {
+				"PUSHUPS": 6,
+				"PLANK": 21,
+				"SITUPS": 14,
+				"WALLSIT": 0
+			}
+		},
+		"Letourist": {
+			"total": 2,
+			"detail": {
+				"PUSHUPS": 8,
+				"PLANK": 22,
+				"SITUPS": 0,
+				"WALLSIT": 0
+			}
+		},
+		"Macksize": {
+			"total": 7,
+			"detail": {
+				"PUSHUPS": 3,
+				"PLANK": 24,
+				"SITUPS": 9,
+				"WALLSIT": 108
+			}
+		},
+		"Léon": {
+			"total": 4,
+			"detail": {
+				"PUSHUPS": 11,
+				"PLANK": 30,
+				"SITUPS": 0,
+				"WALLSIT": 15
+			}
+		},
+		"Yabes": {
+			"total": 2,
+			"detail": {
+				"PUSHUPS": 8,
+				"PLANK": 27,
+				"SITUPS": 0,
+				"WALLSIT": 0
+			}
+		},
+		"Rayden": {
+			"total": 6,
+			"detail": {
+				"PUSHUPS": 0,
+				"PLANK": 82,
+				"SITUPS": 12,
+				"WALLSIT": 24
+			}
+		},
+		"Kissara": {
+			"total": 3,
+			"detail": {
+				"PUSHUPS": 0,
+				"PLANK": 26,
+				"SITUPS": 10,
+				"WALLSIT": 29
+			}
+		},
+		"Coco": {
+			"total": 5,
+			"detail": {
+				"PUSHUPS": 15,
+				"PLANK": 0,
+				"SITUPS": 0,
+				"WALLSIT": 50
+			}
+		},
+		"Vack_Jabre": {
+			"total": 2,
+			"detail": {
+				"PUSHUPS": 0,
+				"PLANK": 27,
+				"SITUPS": 5,
+				"WALLSIT": 0
+			}
+		},
+		"Mika": {
+			"total": 4,
+			"detail": {
+				"PUSHUPS": 6,
+				"PLANK": 0,
+				"SITUPS": 10,
+				"WALLSIT": 18
+			}
+		}
+	}
+}
