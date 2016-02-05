@@ -1,5 +1,15 @@
+# OS X Stuff
 .DS_Store
+
+# NPM
 node_modules/
+
+# Discord auth token
 tenc
+
+# Config & Credentials
+config.json
 credentials.json
+
+# Build folder
 dist/
