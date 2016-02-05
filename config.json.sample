@@ -1,8 +1,8 @@
 {
   "GREETINGS": "ARE YOU READY TO DO SOME PUSHUPS?",
   "SERVERS": {
-    "115771337603153923": {
-      "CRON_EXPRESSION": "* 9,10,11,12,13,14,15,16,17 * * 3,4,5",
+    "server_id": {
+      "CRON_EXPRESSION": "* * * * *",
       "EXERCISE_AT_STARTUP": false,
       "DELAY": 1800000,
       "DELAY_OFFSET": 250000,

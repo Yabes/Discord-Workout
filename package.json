@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rm -Rf dist",
     "test": "NODE_ENV=debug npm run start",
-    "build": "./node_modules/.bin/babel src --out-dir dist && cp src/*.json dist/",
+    "build": "./node_modules/.bin/babel src --out-dir dist",
     "prestart": "npm run clean && npm run build",
     "start": " node dist/index.js"
   },

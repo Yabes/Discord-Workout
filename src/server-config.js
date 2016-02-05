@@ -1,5 +1,5 @@
 // Config import
-import CONFIG from './config';
+import CONFIG from '../config';
 
 /**
  * @typedef ServerConfig

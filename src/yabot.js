@@ -7,8 +7,8 @@ import Score from './score';
 import ServerConfig from './server-config';
 
 // Config files
-import CONFIG from './config';
-import CREDENTIALS from './credentials';
+import CONFIG from '../config';
+import CREDENTIALS from '../credentials';
 
 /**
  * @class Yabot

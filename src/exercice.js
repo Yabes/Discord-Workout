@@ -2,7 +2,7 @@
 import * as Utils from './utils';
 
 // Config
-import CONFIG from './config';
+import CONFIG from '../config';
 
 /**
  * @class Exercice
