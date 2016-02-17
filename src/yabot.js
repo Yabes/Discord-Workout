@@ -75,7 +75,12 @@ export default class Yabot  {
     });
 
     this.bot.on('message', ( user, userID, channelID, message, rawEvent ) => {
+      const words = message.split(' ');
+      const action = words.splice(0, 1);
+
+      // Define actions
       const actions = {
+        // Show every scores
         '!score': () => {
           const score = Score.getScore();
           const message = Object.keys(score.players).map((name) => {
@@ -89,24 +94,51 @@ export default class Yabot  {
 
           this.say(channelID, message);
         },
+
+        // Force exercice on all servers
         '!forceall': () => {
           this.rooms.forEach((rooms, i) => {
             rooms.doExercice({ autoSchedule: false });
           });
         },
+
+        // Force exercice on a specific server
+        '!force': (serverID) => {
+          if (this.rooms[serverID]) {
+            this.rooms[serverID].doExercice({ autoSchedule: false });
+          } else {
+            this.say(channelID, `No server with ID: ${serverID}`);
+          }
+        },
+
+        // Reset all scores
         '!listserver': () => {
           const message = Object.keys(this.bot.servers)
             .map((id, index) => `${this.bot.servers[id].name}: ${id}`)
             .join('\n');
           this.say(channelID, message);
         },
+
+        // Reset all scores
         '!reset': () => {
           Score.reset();
+        },
+
+        // Show Usage
+        '!help': () => {
+          const usage = `Yabot usage:
+          * !help       - Display this text
+          * !score      - Show global scores
+          * !forceall   - Force an exercice on every server
+          * !listserver - List servers' name & id
+          * !reset      - Reset all scores`;
+
+          this.say(channelID, usage);
         }
       };
 
-      if (actions[message]) {
-        actions[message]();
+      if (actions[action]) {
+        actions[action](...words);
       }
 
     });
