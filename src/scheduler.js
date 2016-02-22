@@ -25,9 +25,11 @@ export default class Scheduler {
     // Check if next timing is corresponding to the cron expression
     const now = Date.now();
     const nextTiming = now + timing;
+    const oneMinute = 60 * 1000;
+    const timezoneOffset = new Date().getTimezoneOffset * 60 * 60 * 1000;
     const parserOptions = {
-      currentDate: new Date(nextTiming - 60 * 1000),
-      endDate: new Date(nextTiming + 60 * 1000),
+      currentDate: new Date(nextTiming - oneMinute - timezoneOffset),
+      endDate: new Date(nextTiming + oneMinute - timezoneOffset),
       iterator: true
     };
 
